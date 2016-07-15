@@ -170,6 +170,43 @@ p.nominalBounds = new cjs.Rectangle(0,0,233.3,48.7);
 				_root.btnB[i].cursor = 'pointer';
 			}
 		}
+		
+		//menampilkan di tube
+		this.numbuts1 = 2;
+		var butman1 = [];
+		
+		for (i = 1; i <= this.numbuts; i++) {
+			butman1.push({
+				id: "bawahLoad" + i,
+				src: "images/bawahLoad/bawahKanan"+ i + ".png"
+			});
+		}
+		var imgQ1 = new createjs.LoadQueue();
+		imgQ1.addEventListener("complete", completeHandler1);
+		imgQ1.loadManifest(butman1);
+		
+		function completeHandler1() {
+			_root.btnB1.on("click", function () {
+			console.log ("clicked1");
+			imgCtx1 = new createjs.Container();
+			imgContainer.addChild(imgCtx1);
+			imgMc1 = new createjs.Bitmap(imgQ1.getResult("bawahLoad1"));
+			imgMc1.x = 393;
+			imgMc1.y = 441;
+			imgCtx1.addChild(imgMc1);
+				imgContainer.removeChild(imgCtx2);
+		});
+		_root.btnB2.on("click", function () {
+			console.log ("clicked2");
+			imgCtx2 = new createjs.Container();
+			imgContainer.addChild(imgCtx2);
+			imgMc2 = new createjs.Bitmap(imgQ1.getResult("bawahLoad2"));
+			imgMc2.x = 393;
+			imgMc2.y = 441;
+			imgCtx2.addChild(imgMc2);
+				imgContainer.removeChild(imgCtx1);
+		});
+		}
 	}
 
 	// actions tween:
@@ -230,6 +267,43 @@ p.nominalBounds = new cjs.Rectangle(0,0,247.2,117.7);
 				_root.btnB[i].addChild(bp);
 				_root.btnB[i].cursor = 'pointer';
 			}
+		}
+		
+		//menampilkan di tube
+		this.numbuts1 = 2;
+		var butman1 = [];
+		
+		for (i = 1; i <= this.numbuts; i++) {
+			butman1.push({
+				id: "bawahLoad" + i,
+				src: "images/bawahLoad/bawahKiri"+ i + ".png"
+			});
+		}
+		var imgQ1 = new createjs.LoadQueue();
+		imgQ1.addEventListener("complete", completeHandler1);
+		imgQ1.loadManifest(butman1);
+		
+		function completeHandler1() {
+			_root.btnB1.on("click", function () {
+			console.log ("clicked1");
+			imgCtx1 = new createjs.Container();
+			imgContainer.addChild(imgCtx1);
+			imgMc1 = new createjs.Bitmap(imgQ1.getResult("bawahLoad1"));
+			imgMc1.x = 393;
+			imgMc1.y = 441;
+			imgCtx1.addChild(imgMc1);
+				imgContainer.removeChild(imgCtx2);
+		});
+		_root.btnB2.on("click", function () {
+			console.log ("clicked2");
+			imgCtx2 = new createjs.Container();
+			imgContainer.addChild(imgCtx2);
+			imgMc2 = new createjs.Bitmap(imgQ1.getResult("bawahLoad2"));
+			imgMc2.x = 393;
+			imgMc2.y = 441;
+			imgCtx2.addChild(imgMc2);
+				imgContainer.removeChild(imgCtx1);
+		});
 		}
 	}
 
@@ -292,6 +366,43 @@ p.nominalBounds = new cjs.Rectangle(0,0,247.2,117.7);
 				_root.btnA[i].cursor = 'pointer';
 			}
 		}
+		
+		//menampilkan di tube
+		this.numbuts1 = 2;
+		var butman1 = [];
+		
+		for (i = 1; i <= this.numbuts; i++) {
+			butman1.push({
+				id: "atasLoad" + i,
+				src: "images/atasLoad/atasKanan"+ i + ".png"
+			});
+		}
+		var imgQ1 = new createjs.LoadQueue();
+		imgQ1.addEventListener("complete", completeHandler1);
+		imgQ1.loadManifest(butman1);
+		
+		function completeHandler1() {
+			_root.btnA1.on("click", function () {
+			console.log ("clicked1");
+			imgCtx1 = new createjs.Container();
+			imgContainer.addChild(imgCtx1);
+			imgMc1 = new createjs.Bitmap(imgQ1.getResult("atasLoad1"));
+			imgMc1.x = 393;
+			imgMc1.y = 189;
+			imgCtx1.addChild(imgMc1);
+				imgContainer.removeChild(imgCtx2);
+		});
+		_root.btnA2.on("click", function () {
+			console.log ("clicked2");
+			imgCtx2 = new createjs.Container();
+			imgContainer.addChild(imgCtx2);
+			imgMc2 = new createjs.Bitmap(imgQ1.getResult("atasLoad2"));
+			imgMc2.x = 393;
+			imgMc2.y = 189;
+			imgCtx2.addChild(imgMc2);
+				imgContainer.removeChild(imgCtx1);
+		});
+		}
 	}
 
 	// actions tween:
@@ -323,9 +434,11 @@ p.nominalBounds = new cjs.Rectangle(0,0,247.2,117.7);
 	this.frame_0 = function() {
 		var _root = this;
 		this.numbuts = 2;
+		
 		this.btnA = [];
 		var i;
 		var butman = [];
+		
 		imgContainer = new createjs.Container();
 		stage.addChild(imgContainer);
 		
@@ -339,6 +452,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,247.2,117.7);
 			});
 			this.btnA[i] = this["btnA" + i];
 		}
+		
 		var imgQ = new createjs.LoadQueue();
 		imgQ.addEventListener("complete", completeHandler);
 		imgQ.loadManifest(butman);
@@ -352,6 +466,42 @@ p.nominalBounds = new cjs.Rectangle(0,0,247.2,117.7);
 				_root.btnA[i].addChild(bp);
 				_root.btnA[i].cursor = 'pointer';
 			}
+		}
+		//menampilkan di tube
+		this.numbuts1 = 2;
+		var butman1 = [];
+		
+		for (i = 1; i <= this.numbuts; i++) {
+			butman1.push({
+				id: "atasLoad" + i,
+				src: "images/atasLoad/atasKiri"+ i + ".png"
+			});
+		}
+		var imgQ1 = new createjs.LoadQueue();
+		imgQ1.addEventListener("complete", completeHandler1);
+		imgQ1.loadManifest(butman1);
+		
+		function completeHandler1() {
+			_root.btnA1.on("click", function () {
+			console.log ("clicked1");
+			imgCtx1 = new createjs.Container();
+			imgContainer.addChild(imgCtx1);
+			imgMc1 = new createjs.Bitmap(imgQ1.getResult("atasLoad1"));
+			imgMc1.x = 393;
+			imgMc1.y = 189;
+			imgCtx1.addChild(imgMc1);
+				imgContainer.removeChild(imgCtx2);
+		});
+		_root.btnA2.on("click", function () {
+			console.log ("clicked2");
+			imgCtx2 = new createjs.Container();
+			imgContainer.addChild(imgCtx2);
+			imgMc2 = new createjs.Bitmap(imgQ1.getResult("atasLoad2"));
+			imgMc2.x = 393;
+			imgMc2.y = 189;
+			imgCtx2.addChild(imgMc2);
+				imgContainer.removeChild(imgCtx1);
+		});
 		}
 	}
 
